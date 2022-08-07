@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+.navbar-brand{
+  color: black;
+}
+
+.name{
+  color: black;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #ece8e3;
+}
+
+
+.heading{
+  height: 350px;
+  width: 100%;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  
+ 
+}
+
+.content{
+  font-size: xx-large;
+  padding-top: 7%;
+}
+
+.card{
+  height: 400px;
+  width: 300px;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.productname{
+  font-size: large;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.buttonname{
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.cartarea{
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: black;
+  color: #ece8e3;
+  font-weight: bold;
+}

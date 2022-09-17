@@ -3,7 +3,7 @@ import { Counter } from "./Counter" ; // default
 import {AddColor} from "./AddColor";
 import {Msg} from "./Msg";
 import {useState} from 'react';
-import { Routes, Route, Link, useResolvedPath } from "react-router-dom";
+import { Routes, Route, Link, useNavigate,useParams } from "react-router-dom";
 
 
 
@@ -89,6 +89,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<MovieList />} />
+        <Route path="/movies/:id" element={<MovieDetails />} />
         <Route path="/colors" element={<AddColor />}/>
         <Route path="/users" element={<UserList />}/>
       </Routes>
@@ -97,6 +98,15 @@ export default function App() {
   //JSX ends
 }
 
+
+function MovieDetails(){
+  const {id}=useParams();
+  return(
+    <div>
+      <h1>Movie Detail Page {id}</h1>
+    </div>
+  )
+}
 function UserList(){
   const user = [
     {
@@ -126,19 +136,26 @@ function Home(){
 }
 
 function MovieList(){
-  const movieList = INTIAL_MOVIE_LIST;
+  const[newMovie, setMovie]=useState({});
+  const [movieList, setMovieList] = useState(INTIAL_MOVIE_LIST);
+
   return(
-        
-     <div className="movie-list">
-     {movieList.map((mv,index) => (
-        <Movie key={index} movie={mv} />
-     ))}
-     </div>
-      
+    <div>
+      <div>
+        {/* <input
+      onChange={(event) => setColor(event.target.value)}
+      value={color} />  */}
+      </div> 
+      <div className="movie-list">
+      {movieList.map((mv,index) => (
+          <Movie key={index} movie={mv} id={index} />
+      ))}
+      </div>
+    </div>  
   );
 }
 
-function Movie({ movie }){
+function Movie({ movie,id }){
   // const movie = {
   //   name: "RRR",
   //   rating: 8.8,
@@ -154,6 +171,7 @@ const[show,setShow]=useState(true);
 const summaryStyles={
  display: show ? "block" : "none",
 }
+const navigate = useNavigate();
   return(
     <div className="movie-container">
       <img className="movie-poster" src={movie.poster}/>
@@ -161,6 +179,7 @@ const summaryStyles={
       <h2 className="movie-name">{movie.name}</h2> 
       <p style ={styles} className="movie-rating">⭐{movie.rating}</p>
       </div>
+      <button onClick={()=>{navigate("/movies/" + id)}}>Info</button>
       <button onClick={()=>{setShow(!show)}}>Toggle description</button>
       <p styles={summaryStyles} className="movie-summary">{movie.summary}</p>
       <Counter />

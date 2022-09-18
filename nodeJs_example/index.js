@@ -4,11 +4,16 @@
 import express from "express";
 import { MongoClient } from "mongodb";
 import dotenv from 'dotenv'
+import { addMovies, getAllMovie, getMovieById, deleteMovieById,updateMovieById } from "./helper.js";
+import { moviesRouter} from './routes/movies.js'
+import { userRouter} from './routes/user.js'
+import cors from "cors";
 
 dotenv.config()
 console.log(process.env)
 
 const app=express();
+app.use(cors())
 const Port=process.env.Port;
 
 //const MONGO_URL="mongodb://localhost"
@@ -21,71 +26,18 @@ async function createConnection(){
   return client;
 }
 
-const client=await createConnection();
+export const client=await createConnection();
 
 app.use(express.json())
 
-
-//post method - to insert data to db
-app.post("/movies", async (request, response) => {
-  const newMovies = request.body;
-  console.log(newMovies);
-  //db.movies.insertMany(movies)
-  const result = await client
-  .db("b37wd")
-  .collection("movie")
-  .insertMany(newMovies);
-
-  response.send(result);
-})
-
 app.get("/",(req,res)=>{
-    res.send("Hello")
+  res.send("Hello")
 })
 
+//specify movie router
 
-app.get("/movies",async (req,res)=>{
-    // const { language,rating }=req.query;
-    // console.log(req.query,language);
-    if(req.query.rating){
-      req.query.rating=+req.query.rating;
-    }
-    let filterMovies=await client
-    .db("b37wd")
-    .collection("movie")
-    .find(req.query).toArray();
+app.use("/movies",moviesRouter)
 
-    // if(language){
-    //   filterMovies=filterMovies.filter((mv)=> mv.language===language)
-    // }
-    
-    // if(rating){
-    //   filterMovies=filterMovies.filter((mv)=> mv.rating===+rating)
-    // }
-    res.send(filterMovies)
-})
-
-app.get("/movies/:id", async (req,res)=>{
-    const {id}=req.params;
-    console.log(id)
-    const movies= await client
-    .db("b37wd")
-    .collection("movie")
-    .findOne({id: id});
-    movies
-    ? res.send(movies)
-    : res.status(404).send({message : "no movie found" })
-
-})
-
-app.delete("/movies/:id", async (req,res)=>{
-  const {id}=req.params;
-  console.log(id)
-  const movies= await client
-  .db("b37wd")
-  .collection("movie")
-  .deleteOne({id: id});
-  res.send(movies)
-})
+app.use("/user",userRouter)
 
 app.listen(Port,()=> console.log("server started on port:",Port))

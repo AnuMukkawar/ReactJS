@@ -1,1 +1,1 @@
-export const API = "https://b37-nodeapp.herokuapp.com"
+export const API = "https://movieapp-node.herokuapp.com"

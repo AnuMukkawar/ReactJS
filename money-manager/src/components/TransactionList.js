@@ -9,7 +9,6 @@ const { transactions }=useContext(GlobalContext);
         <div>
         <h3>History</h3>
         <ul className="list">
-            {/*<Transaction key={transaction.id} transaction={transaction} />*/}
          
           {transactions.map(transaction => (<Transaction key={transaction.id} transaction={transaction}/>))}
         </ul>

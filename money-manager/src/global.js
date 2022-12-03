@@ -1,0 +1,1 @@
+export const API = "https://backend-money-manager.herokuapp.com"

@@ -7,6 +7,7 @@ import { AddTransaction } from './components/AddTransaction';
 import { GlobalProvider } from './context/GlobalState';
 import { Header } from './components/Header';
 
+
 export default function App() {
   return (
     <GlobalProvider>

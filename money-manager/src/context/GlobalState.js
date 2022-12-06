@@ -33,20 +33,22 @@ export const GlobalProvider=({children})=>{
         }
     }
    //actions
-   async function deleteTransaction(_id){
+   async function deleteTransaction(transaction){
     try{
         await fetch(`${API}`,{
                  method: "DELETE",
-                 params: {
-                    _id:_id}
+                 body: JSON.stringify(transaction),
+                headers: {
+                    "Content-Type": "application/json",
+                }
         }) 
-        .then(res => console.log(res))
+        .then(res => getTransactions())
         .catch(err => console.log(err));
 
         // pass id as params
                 dispatch({
                     type: 'DELETE_TRANSACTION',
-                    payload:_id
+                    payload: transaction
                 });      
 
     }catch(err){

@@ -1,1 +1,1 @@
-export const API = "https://backend-money-manager.herokuapp.com"
+export const API = "https://money-manager-nqfx.onrender.com"

@@ -36,7 +36,7 @@ export const GlobalProvider=({children})=>{
    //actions
    async function deleteTransaction(_id){
     try{
-        await fetch('https://backend-money-manager.herokuapp.com/',{
+        await fetch('https://money-manager-nqfx.onrender.com/',{
                  method: "DELETE",
                  data: {
                     _id:_id}
@@ -65,7 +65,7 @@ export const GlobalProvider=({children})=>{
 async function addTransaction(transaction) {
     console.log(transaction)
     try{
-       await fetch('https://backend-money-manager.herokuapp.com/',{
+       await fetch('https://money-manager-nqfx.onrender.com/',{
             method: "POST",
             body: JSON.stringify(transaction),
             headers: {

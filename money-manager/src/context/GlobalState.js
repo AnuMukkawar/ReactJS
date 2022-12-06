@@ -21,7 +21,6 @@ export const GlobalProvider=({children})=>{
     async function getTransactions() {
         try{
             const res=await axios.get(`${API}`)
-            console.log(res.data);
             dispatch({
                 type: 'GET_TRANSACTIONS',
                 payload:res.data
@@ -36,24 +35,20 @@ export const GlobalProvider=({children})=>{
    //actions
    async function deleteTransaction(_id){
     try{
-        await fetch('https://money-manager-nqfx.onrender.com/',{
+        await fetch(`${API}`,{
                  method: "DELETE",
-                 data: {
+                 params: {
                     _id:_id}
         }) 
         .then(res => console.log(res))
         .catch(err => console.log(err));
 
         // pass id as params
-        // for(let i=0;i<res.data.length;i++){
-            // if(res.data[i]._id===_id){
                 dispatch({
                     type: 'DELETE_TRANSACTION',
                     payload:_id
                 });      
-            // }
-         //}
-        
+
     }catch(err){
         dispatch({
             type: 'TRANSACTION_ERROR',
@@ -63,26 +58,17 @@ export const GlobalProvider=({children})=>{
 }
 
 async function addTransaction(transaction) {
-    console.log(transaction)
     try{
-       await fetch('https://money-manager-nqfx.onrender.com/',{
+       await fetch(`${API}`,{
             method: "POST",
             body: JSON.stringify(transaction),
             headers: {
             "Content-Type": "application/json",
             }
         })
-        .then(res => console.log(res))
+        .then(res => getTransactions())
         .catch(err => console.log(err));
-    
-    // const config={
-    //     headers:{
-    //         'Content-Type': 'application/json'
-    //     }
-    // }
-    
-    //     const res=await axios.post(`${API}`,config,transaction)
-        // console.log(res.data);
+
         dispatch({
             type: 'ADD_TRANSACTIONS',
             payload:transaction

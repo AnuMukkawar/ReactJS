@@ -10,7 +10,7 @@ let year = date_time.getFullYear();
 
 const date_file=year + "-" + month + "-" + date;
 // prints date & time in YYYY-MM-DD HH:MM:SS format
-console.log(date_file.toString());
+date_file.toString();
 f.writeFile(`./filefolder/${date_file}.txt`,date_file,(err)=> {console.log(`completed writing ${date_file}.txt`)})
 
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {API} from "../global"
 
 export default class UserDetails extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ export default class UserDetails extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:5000/userData", {
+    fetch(`${API}/userData`, {
       method: "POST",
       crossDomain: true,
       headers: {

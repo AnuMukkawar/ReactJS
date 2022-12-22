@@ -45,7 +45,7 @@ app.post("/register", async (req, res) => {
     });
     res.send({ status: "ok" });
   } catch (error) {
-    res.send({ status: "error" });
+    res.send({ status: error });
   }
 });
 
@@ -100,7 +100,7 @@ app.post("/forgot-password", async (req, res) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, {
       expiresIn: "5m",
     });
-    const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
+    const link = `https://login-registration-h08q.onrender.com/reset-password/${oldUser._id}/${token}`;
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {

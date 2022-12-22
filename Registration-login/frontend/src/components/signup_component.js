@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {API} from "../global"
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class SignUp extends Component {
     e.preventDefault();
     const { fname, lname, email, password } = this.state;
     console.log(fname, lname, email, password);
-    fetch("http://localhost:5000/register", {
+    fetch(`${API}/register`, {
       method: "POST",
       crossDomain: true,
       headers: {

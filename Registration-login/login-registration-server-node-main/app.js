@@ -11,11 +11,9 @@ app.use(express.urlencoded({ extended: false }));
 const jwt = require("jsonwebtoken");
 var nodemailer = require("nodemailer");
 
-const JWT_SECRET =
-  "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jbkj?[]]pou89ywe";
+const JWT_SECRET =secreatKey;
 
-const mongoUrl =
-  "mongodb+srv://Anuja:Anuja123@cluster0.h8yy3yb.mongodb.net/?retryWrites=true&w=majority";
+const mongoUrl = MONGO_URL;
 
 mongoose
   .connect(mongoUrl, {

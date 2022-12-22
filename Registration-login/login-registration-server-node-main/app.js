@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 const jwt = require("jsonwebtoken");
 var nodemailer = require("nodemailer");
 
-const JWT_SECRET =secreatKey;
+const JWT_SECRET =SECREATKEY;
 
 const mongoUrl = MONGO_URL;
 
@@ -85,7 +85,7 @@ app.post("/userData", async (req, res) => {
   } catch (error) {}
 });
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Server Started");
 });
 

@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 const jwt = require("jsonwebtoken");
 var nodemailer = require("nodemailer");
 
-const JWT_SECRET =SECREATKEY;
+const JWT_SECRET ="hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jbkj?[]]pou89ywe";
 
 const mongoUrl = MONGO_URL;
 

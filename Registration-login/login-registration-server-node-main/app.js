@@ -16,7 +16,7 @@ const JWT_SECRET =process.env.SECREATKEY;
 const mongoUrl = process.env.MONGO_URL;
 
 mongoose
-  .connect(mongoUrl, {
+  .connect( process.env.MONGO_URL, {
     useNewUrlParser: true,
   })
   .then(() => {

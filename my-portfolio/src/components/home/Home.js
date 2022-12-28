@@ -4,7 +4,8 @@
 import React from 'react';
 import './Home.css';
 import { Social } from './Social';
-import {Data} from './Data.js'
+import {Data} from './Data.js';
+
 export function Home() {
   return (
     <section className="home section" id="home">
@@ -16,6 +17,7 @@ export function Home() {
           <Data/>
         </div>
         </div>
+       
       </div>
     </section>
   );

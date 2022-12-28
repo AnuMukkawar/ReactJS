@@ -7,7 +7,8 @@ const Data=()=>{
             <h3 className="home__subtitle">Full Stack Developer</h3>
             <p className="home__description">I am full stack developer based in Udgir, 
             and I'm very passionate and dedicated to my work. </p>
-            <a href="#contact" className="button button--flex">Contact me  <i className="uil uil-message nav__icon"></i></a>
+            <a href="#contact" className="button button--flex">Contact me<i className="uil uil-message"></i></a>
+            
         </div>
     )
 }

@@ -17,11 +17,11 @@ const About=()=>{
                     <p className="about__description">
                      I completed my graduation in computer science and enginerring in 2019. 
                      I am Full stack developer, I create web pages with UI user interface.
-                     Currently,I am working as SKills Developer in Aera Technology, Pune. I have 3 years of experience in SQL.
+                     Currently,I am working as Skills Developer at Aera Technology, Pune. I have 3 years of experience in SQL.
                      Now, I want to explore new opportunities in full stack development.
                     </p>
 
-                    <a download="" href={Resume} className="button button--flex"> Download CV</a>
+                    <a download="" href={Resume} className="button button--flex"> Download CV  <i class="uil uil-file-download-alt"></i></a>
                 </div>
             </div>
         </section>

@@ -24,35 +24,24 @@ const Projects=()=>{
                         <div className="projects__modal-content">
                             <i onClick={()=>toggleTab(0)} className="uil uil-times projects__modal-close"></i>
 
-                            <h3 className="projetcs__modal-title"></h3>
+                            <h3 className="projetcs__modal-title">Money Manager App</h3>
                             <p className="projects__modal-decription">
-                                abcd
+                                This app is having functionality to add expences and income. It having option to delete the expences as per our convinence.
                             </p>
                             <ul className="projects__modal-projects grid">
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Frontend deployed url-
+                                        Frontend deployed url- https://sage-praline-e25abd.netlify.app/
                                     </p>
                                 </li>
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Backend deployed url-
+                                        Backend deployed url- https://money-manager-nqfx.onrender.com/
                                     </p>
                                 </li>
-                                <li className="projects__modal-projects">
-                                    <i className="uil uil-check-circle projects__modal-icon"></i>
-                                    <p className="projects__modal-info">
-                                        Frontend source code-
-                                    </p>
-                                </li>
-                                <li className="projects__modal-projects">
-                                    <i className="uil uil-check-circle projects__modal-icon"></i>
-                                    <p className="projects__modal-info">
-                                        Backend source code-
-                                    </p>
-                                </li>
+                            
                             </ul>
                         </div>
                     </div>
@@ -69,33 +58,22 @@ const Projects=()=>{
                         <div className="projects__modal-content">
                             <i onClick={()=>toggleTab(0)} className="uil uil-times projects__modal-close"></i>
 
-                            <h3 className="projetcs__modal-title"></h3>
+                            <h3 className="projetcs__modal-title">Movie Flix App</h3>
                             <p className="projects__modal-decription">
-                                abcd
+                                This app is for showing the movies list. We can add/delete movies.
                             </p>
                             <ul className="projects__modal-projects grid">
+                                
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Frontend deployed url-
+                                        Frontend source code- ReactJS/tree/master/movie-app/
                                     </p>
                                 </li>
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Backend deployed url-
-                                    </p>
-                                </li>
-                                <li className="projects__modal-projects">
-                                    <i className="uil uil-check-circle projects__modal-icon"></i>
-                                    <p className="projects__modal-info">
-                                        Frontend source code-
-                                    </p>
-                                </li>
-                                <li className="projects__modal-projects">
-                                    <i className="uil uil-check-circle projects__modal-icon"></i>
-                                    <p className="projects__modal-info">
-                                        Backend source code-
+                                        Backend source code- Backend-MovieApp/
                                     </p>
                                 </li>
                             </ul>

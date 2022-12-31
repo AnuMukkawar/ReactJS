@@ -25,7 +25,7 @@ import './Header.css'
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="#project" className="nav__link">
+                            <a href="#projects" className="nav__link">
                                 <i className="uil uil-edit-alt nav__icon"></i>Personal Projects
                             </a>
                         </li>

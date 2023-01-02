@@ -8,7 +8,7 @@ import {About} from './components/about/About.js';
 import {Skills} from './components/skills/Skills.js';
 import {Projects} from './components/projects/Projects';
 import {Qualification}  from './components/qualification/Qualification';
-
+import {Contact} from './components/contact/Contact';
 // import { BrowserRouter as Router, Switch, Route,Routes,Link } from "react-router-dom"
 
 
@@ -23,6 +23,7 @@ function App() {
       <Skills/>
       <Projects/>
       <Qualification/>
+      <Contact />
     </main>
     {/* <Routes>
       <Route path='/' element={<Home/>}/>

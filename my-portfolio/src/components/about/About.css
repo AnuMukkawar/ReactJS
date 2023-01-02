@@ -52,7 +52,7 @@
    }
 
    .about__img{
-    width: 120px;
+    width: 350px;
    }
 
    .about__box{
@@ -91,7 +91,7 @@
             padding: 0;
         }
         .about__img{
-            width: 190px;
+            width: 150px;
            }
     
   }

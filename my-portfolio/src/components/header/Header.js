@@ -2,8 +2,7 @@ import React ,{useState} from "react";
 import './Header.css'
 
  const Header = () => {
-    // const [sidebar,setSidebar]=useState(false);
-    const[Toggle,showMenu]=useState(false);
+     const[Toggle,showMenu]=useState(false);
     return (
         <header className="header">
             <nav className="nav container">
@@ -47,19 +46,7 @@ import './Header.css'
                     <i className="uil uil-apps"></i>
                 </div>
             </nav>
-            {/* <header className="header">
-                <div className="container-flex">
-                    <div className="nav">
-                        <ul className={sidebar ? 'nav-links-sidebar' : "nav-links"} onClick={()=>setSidebar(false)}>
-                            <li><Link to="/">Home</Link></li>
-                            <li> <Link to="/about">About</Link></li>
-                            <li> <Link to="/skills">Skills</Link> </li>
-                            <li><Link to="/projects">Projects</Link></li>
-                        </ul>
-                    </div>
-                </div>
-            </header> */}
-        </header>
+      </header>
     )
 }
 export {Header};

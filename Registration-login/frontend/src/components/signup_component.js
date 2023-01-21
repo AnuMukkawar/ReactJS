@@ -16,7 +16,7 @@ export default class SignUp extends Component {
     e.preventDefault();
     const { fname, lname, email, password } = this.state;
     console.log(fname, lname, email, password);
-    fetch(`${API}/register`, {
+     fetch(`${API}/register`, {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -87,7 +87,7 @@ export default class SignUp extends Component {
           </button>
         </div>
         <p className="forgot-password text-right">
-          Already registered <a href="/sign-in">sign in?</a>
+          Already registered <a href="/login-user">sign in?</a>
         </p>
       </form>
     );

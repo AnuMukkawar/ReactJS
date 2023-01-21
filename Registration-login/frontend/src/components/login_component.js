@@ -10,17 +10,14 @@ export default class Login extends Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
     const { email, password } = this.state;
     console.log(email, password);
-    fetch(`${API}/login-user`, {
+    await fetch(`${API}/login-user`, {
       method: "POST",
-      crossDomain: true,
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         email,
@@ -81,7 +78,7 @@ export default class Login extends Component {
           </button>
         </div>
         <p className="forgot-password text-right">
-          <a href="/sign-up">Sign Up</a>
+          <a href="/register">Sign Up</a>
         </p>
       </form>
     );

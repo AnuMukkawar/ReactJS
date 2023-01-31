@@ -79,8 +79,8 @@ const Projects=()=>{
                         <i class="uil uil-film projects__icon"></i>
                         <h3 className="projects__title">Movie Flix App</h3>
                     </div>
-                    <span className="projects__button" onClick={()=>toggleTab(3)}>source code <i className="uil uil-arrow-right projects__button-icon"></i></span>
-
+                    <span className="projects__button" onClick={()=>toggleTab(3)}>URL<i className="uil uil-arrow-right projects__button-icon"></i></span>
+                    <span className="projects__button" onClick={()=>toggleTab(4)}>source code <i className="uil uil-arrow-right projects__button-icon"></i></span>
                     <div className={toggelState===3 ? "projects__modal active-modal" : "projects__modal"}>
                         <div className="projects__modal-content">
                             <i onClick={()=>toggleTab(0)} className="uil uil-times projects__modal-close"></i>
@@ -88,6 +88,31 @@ const Projects=()=>{
                             <h3 className="projetcs__modal-title">Movie Flix App</h3>
                             <p className="projects__modal-decription">
                                 This app is for showing the movies list. We can add/delete movies.
+                            </p>
+                            <ul className="projects__modal-projects grid">
+                                <li className="projects__modal-projects">
+                                    <i className="uil uil-check-circle projects__modal-icon"></i>
+                                    <p className="projects__modal-info">
+                                        Frontend- https://meek-palmier-bb5f8d.netlify.app/
+                                    </p>
+                                </li>
+                                <li className="projects__modal-projects">
+                                    <i className="uil uil-check-circle projects__modal-icon"></i>
+                                    <p className="projects__modal-info">
+                                        Backend- https://backend-movie-app.onrender.com
+                                    </p>
+                                </li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                    <div className={toggelState===4 ? "projects__modal active-modal" : "projects__modal"}>
+                        <div className="projects__modal-content">
+                            <i onClick={()=>toggleTab(0)} className="uil uil-times projects__modal-close"></i>
+
+                            <h3 className="projetcs__modal-title">Movie Flix App</h3>
+                            <p className="projects__modal-decription">
+                                
                                  Tech stack used- HTML,CSS,Javascript,ReactJS,NodeJS,MongoDB
                             </p>
                             <ul className="projects__modal-projects grid">

@@ -1,1 +1,1 @@
-export const API = "https://movieapp-node.herokuapp.com"
+export const API = "https://backend-movie-app.onrender.com"

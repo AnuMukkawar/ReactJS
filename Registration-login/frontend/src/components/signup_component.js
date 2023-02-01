@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import {API} from "../global"
+import {API} from "../global";
 
 export default class SignUp extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -28,12 +29,14 @@ export default class SignUp extends Component {
         fname,
         email,
         lname,
-        password,
+        password
       }),
     })
-      .then((res) => res.json())
+      .then((res) => {res.json();
+      window.location.href = '/login-user';})
       .then((data) => {
         console.log(data, "userRegister");
+       
       });
   }
   render() {

@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const dotenv =require("dotenv");
+
+
 app.use(express.json());
 const cors = require("cors");
 app.use(cors());
@@ -10,6 +13,9 @@ app.use(express.urlencoded({ extended: false }));
 
 const jwt = require("jsonwebtoken");
 var nodemailer = require("nodemailer");
+
+
+dotenv.config();
 
 const JWT_SECRET =process.env.SECREATKEY;
 
@@ -43,9 +49,9 @@ app.post("/register", async (req, res) => {
       email,
       password: encryptedPassword,
     });
-    res.send({ status: "ok" });
+    res.send(console.log("ok"));
   } catch (error) {
-    res.send({ status: error });
+    res.send( console.log("error:",error));
   }
 });
 
@@ -104,14 +110,14 @@ app.post("/forgot-password", async (req, res) => {
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "adarsh438tcsckandivali@gmail.com",
-        pass: "rmdklolcsmswvyfw",
+        user: process.env.USER,
+        pass:  process.env.PWD,
       },
     });
 
     var mailOptions = {
-      from: "youremail@gmail.com",
-      to: "thedebugarena@gmail.com",
+      from: process.env.USER,
+      to: email,
       subject: "Password Reset",
       text: link,
     };

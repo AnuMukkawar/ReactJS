@@ -8,6 +8,9 @@ export default class SignUp extends Component {
     this.state = {
       fname: "",
       lname: "",
+      dob: "",
+      age: 0,
+      contact: 0,
       email: "",
       password: "",
     };
@@ -15,8 +18,8 @@ export default class SignUp extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    const { fname, lname, email, password } = this.state;
-    console.log(fname, lname, email, password);
+    const { fname, lname, dob, age, contact, email, password } = this.state;
+    // console.log(fname, lname, email, password);
      fetch(`${API}/register`, {
       method: "POST",
       crossDomain: true,
@@ -27,8 +30,11 @@ export default class SignUp extends Component {
       },
       body: JSON.stringify({
         fname,
-        email,
         lname,
+        dob,
+        age,
+        contact,
+        email,
         password
       }),
     })
@@ -63,6 +69,37 @@ export default class SignUp extends Component {
             onChange={(e) => this.setState({ lname: e.target.value })}
           />
         </div>
+
+        <div className="mb-3">
+          <label>DOB</label>
+          <input
+            type="Date"
+            className="form-control"
+            placeholder="DOB"
+            onChange={(e) => this.setState({ dob: e.target.value })}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label>Age</label>
+          <input
+            type="Number"
+            className="form-control"
+            placeholder="Age"
+            onChange={(e) => this.setState({ age: e.target.value })}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label>Contact</label>
+          <input
+            type="Number"
+            className="form-control"
+            placeholder="Contact"
+            onChange={(e) => this.setState({ contact: e.target.value })}
+          />
+        </div>
+
 
         <div className="mb-3">
           <label>Email address</label>

@@ -30,8 +30,13 @@ export default class UserDetails extends Component {
   render() {
     return (
       <div>
-        Name<h1>{this.state.userData.fname}</h1>
-        Email <h1>{this.state.userData.email}</h1>
+        <div><h1>Profile Details</h1></div>
+        <h2>Hi {this.state.userData.fname}</h2><br/>
+        <h4>Below are your details-</h4>
+        <h4>DOB- {this.state.userData.dob}</h4>
+        <h4>Age- {this.state.userData.age}</h4>
+        <h4>Contact- {this.state.userData.contact}</h4>
+        <h4>Email- {this.state.userData.email}</h4>
       </div>
     );
   }

@@ -33,13 +33,13 @@ const Projects=()=>{
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Frontend- https://sage-praline-e25abd.netlify.app/
+                                    Frontend site-<a href="https://sage-praline-e25abd.netlify.app/" rel="noreferrer" target="_blank">click here</a> 
                                     </p>
                                 </li>
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Backend- https://money-manager-nqfx.onrender.com/
+                                    Backend site-<a href="https://money-manager-nqfx.onrender.com/" rel="noreferrer" target="_blank">click here</a>
                                     </p>
                                 </li>
                             
@@ -59,13 +59,13 @@ const Projects=()=>{
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Frontend git repo- ReactJS/tree/master/money-manager/
+                                        Frontend code-<a href="https://github.com/AnuMukkawar/ReactJS/tree/master/money-manager/" rel="noreferrer" target="_blank">click here</a>
                                     </p>
                                 </li>
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Backend git repo- backend-money-manager/
+                                        Backend code-<a href="https://github.com/AnuMukkawar/backend-money-manager/" rel="noreferrer" target="_blank">click here</a>
                                     </p>
                                 </li>
                             
@@ -93,13 +93,13 @@ const Projects=()=>{
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Frontend- https://meek-palmier-bb5f8d.netlify.app/
+                                    Frontend site-<a href="https://meek-palmier-bb5f8d.netlify.app/" rel="noreferrer" target="_blank">click here</a> 
                                     </p>
                                 </li>
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Backend- https://backend-movie-app.onrender.com
+                                    Backend site-<a href="https://backend-movie-app.onrender.com" rel="noreferrer" target="_blank">click here</a> 
                                     </p>
                                 </li>
                             
@@ -120,13 +120,13 @@ const Projects=()=>{
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Frontend- ReactJS/tree/master/movie-app/
+                                    Frontend code-<a href="https://github.com/AnuMukkawar/ReactJS/tree/master/movie-app/" rel="noreferrer" target="_blank">click here</a> 
                                     </p>
                                 </li>
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Backend- Backend-MovieApp/
+                                    Backend code-<a href="https://github.com/AnuMukkawar/Backend-MovieApp/" rel="noreferrer" target="_blank">click here</a> 
                                     </p>
                                 </li>
                             </ul>
@@ -154,7 +154,7 @@ const Projects=()=>{
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                    Backend- https://booking-api-sch3.onrender.com
+                                    Backend site-<a href="https://booking-api-sch3.onrender.com/customerDetails" rel="noreferrer" target="_blank">click here</a>
                                     </p>
                                 </li>
                             
@@ -174,7 +174,7 @@ const Projects=()=>{
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Backend git repo- Booking-Api/
+                                    Backend code-<a href="https://github.com/AnuMukkawar/Booking-Api/" rel="noreferrer" target="_blank">click here</a>
                                     </p>
                                 </li>
                             
@@ -201,7 +201,7 @@ const Projects=()=>{
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Frontend- https://heartfelt-sunflower-57bf92.netlify.app/
+                                    Frontend site-<a href="https://heartfelt-sunflower-57bf92.netlify.app/" rel="noreferrer" target="_blank">click here</a>
                                     </p>
                                 </li>
                             
@@ -221,7 +221,7 @@ const Projects=()=>{
                                 <li className="projects__modal-projects">
                                     <i className="uil uil-check-circle projects__modal-icon"></i>
                                     <p className="projects__modal-info">
-                                        Frontend git repo- HTML/Day16_Tasks/CalculatorTask
+                                    Frontend code-<a href="https://github.com/AnuMukkawar/HTML/tree/master/Day16_Tasks/CalculatorTask/" rel="noreferrer" target="_blank">click here</a>
                                     </p>
                                 </li>
                             

@@ -1,7 +1,6 @@
 import React from "react";
 import "./About.css";
 import AboutImg from "./profile.jpg";
-import Resume from "./AnujaM-Resume.pdf";
 import {Info} from "./Info";
 
 const About=()=>{
@@ -21,7 +20,7 @@ const About=()=>{
                      Now, I want to explore new opportunities in full stack development.
                     </p>
 
-                    <a download="" href={Resume} className="button button--flex"> Download CV  <i class="uil uil-file-download-alt"></i></a>
+                    <a href="https://drive.google.com/file/d/15ovWpdprf6qzZWei-3K4VCsAv_--KF-X/view?usp=sharing" className="button button--flex" target="_blank"> Download CV  <i class="uil uil-file-download-alt"></i></a>
                 </div>
             </div>
         </section>

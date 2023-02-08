@@ -134,7 +134,7 @@ const Projects=()=>{
                     </div>
                 </div>
 
-                <div className="projects__content">
+                {/* <div className="projects__content">
                     <div>
                         <i class="uil uil-book projects__icon"></i> 
                         <h3 className="projects__title"> Hotel Booking Api</h3>
@@ -181,7 +181,7 @@ const Projects=()=>{
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="projects__content">
                     <div>
